@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>SkillPilot AI — Smart Learning Planner</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="brand-mark" aria-hidden="true">✦</div>
+      <p class="tag">YOUR PERSONAL LEARNING SPACE</p>
+      <h1>SkillPilot <span>AI</span></h1>
+      <p class="subtitle">Small steps. Smarter learning.</p>
+      <div class="hero-chip"><span class="status-dot"></span> Your next step starts here</div>
+    </header>
+
+    <section class="stats" aria-label="Task statistics">
+      <article class="stat"><p>Total tasks</p><h2 id="totalTasks">0</h2><span class="stat-note">All missions</span></article>
+      <article class="stat"><p>Completed</p><h2 id="completedTasks">0</h2><span class="stat-note">Good progress</span></article>
+      <article class="stat"><p>Pending</p><h2 id="pendingTasks">0</h2><span class="stat-note">Up next</span></article>
+    </section>
+
+    <section class="planner panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">PLAN YOUR PROGRESS</p><h2>Today's mission</h2><p class="subtitle">Turn one goal into a small win.</p></div>
+        <div class="heading-icon" aria-hidden="true">↗</div>
+      </div>
+
+      <form id="taskForm">
+        <div class="field">
+          <label for="taskInput">What do you want to do?</label>
+          <input id="taskInput" type="text" placeholder="e.g. Practice JavaScript loops" required maxlength="100" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="priority">Priority</label>
+          <select id="priority">
+            <option value="High">High priority</option>
+            <option value="Medium" selected>Medium priority</option>
+            <option value="Low">Low priority</option>
+          </select>
+        </div>
+        <button class="primary-btn" type="submit"><span>＋</span> Add mission</button>
+      </form>
+
+      <div class="list-heading"><h3>Your missions</h3><span id="taskCountPill" class="count-pill">0 tasks</span></div>
+      <ul id="taskList" aria-live="polite"></ul>
+      <div id="emptyMessage" class="empty-state">
+        <div class="empty-icon" aria-hidden="true">✧</div>
+        <strong>Your runway is clear</strong>
+        <p>Add your first mission and start building momentum.</p>
+      </div>
+    </section>
+
+    <section class="coach panel">
+      <div class="coach-icon" aria-hidden="true">✦</div>
+      <div class="coach-copy"><p class="eyebrow">SMART NUDGE</p><h2 id="coachTitle">Ready when you are</h2><p id="coachMessage">Add a task and SkillPilot will suggest a practical next step using simple built-in rules.</p></div>
+    </section>
+
+    <footer><span>SKILLPILOT AI</span><span>Built for curious minds ✦</span></footer>
+  </main>
+</body>
+</html>
